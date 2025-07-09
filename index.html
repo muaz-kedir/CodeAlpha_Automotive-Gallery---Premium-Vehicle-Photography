@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automotive Gallery - Premium Vehicle Photography</title>
+    <meta name="description" content="Discover the ultimate collection of automotive excellence. From rugged off-roaders to luxury cruisers." />
+    <meta name="author" content="Automotive Gallery" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Automotive Gallery - Premium Vehicle Photography" />
+    <meta property="og:description" content="Discover the ultimate collection of automotive excellence. From rugged off-roaders to luxury cruisers." />
+    <meta property="og:type" content="website" />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <svg viewBox="0 0 24 24">
+                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+                    <circle cx="12" cy="13" r="4"/>
+                </svg>
+                AutoGallery
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#carousel">Latest</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M3 12h18m-9-9v18"/>
+                </svg>
+            </button>
+
+            <div class="mobile-menu" id="mobileMenu">
+                <ul class="mobile-nav-links">
+                    <li><a href="#home" onclick="closeMobileMenu()">Home</a></li>
+                    <li><a href="#gallery" onclick="closeMobileMenu()">Gallery</a></li>
+                    <li><a href="#carousel" onclick="closeMobileMenu()">Latest</a></li>
+                    <li><a href="#features" onclick="closeMobileMenu()">Features</a></li>
+                    <li><a href="#contact" onclick="closeMobileMenu()">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg"></div>
+        <img src="./images/OIP (10).jpg" alt="Hero Background" class="hero-image">
+        
+        <div class="hero-content">
+            <h1 class="hero-title">
+                AUTOMOTIVE
+                <br>
+                <span class="hero-title-gradient">GALLERY</span>
+            </h1>
+            <p class="hero-description">
+                Discover the ultimate collection of automotive excellence. From rugged off-roaders to luxury cruisers.
+            </p>
+            <a href="#gallery" class="hero-button">
+                <svg viewBox="0 0 24 24">
+                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+                    <circle cx="12" cy="13" r="4"/>
+                </svg>
+                Explore Collection
+            </a>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="scroll-indicator-inner">
+                <div class="scroll-dot"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    Featured <span class="highlight">Vehicles</span>
+                </h2>
+                <p class="section-description">
+                    Each vehicle tells a story of power, precision, and passion. Explore our handpicked collection.
+                </p>
+            </div>
+
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Gallery items will be populated by JavaScript -->
+            </div>
+
+            <div style="text-align: center;">
+                <a href="#" class="view-collection-btn">
+                    View Full Collection
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carousel Section -->
+    <section id="carousel" class="section carousel-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    Latest <span class="highlight">Arrivals</span>
+                </h2>
+                <p class="section-description">
+                    Discover our newest additions to the collection. From powerful trucks to adventure-ready ATVs.
+                </p>
+            </div>
+
+            <div class="carousel-container">
+                <div class="carousel-track" id="carouselTrack">
+                    <!-- Carousel slides will be populated by JavaScript -->
+                </div>
+
+                <button class="carousel-controls carousel-prev" onclick="previousSlide()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M15 18l-6-6 6-6"/>
+                    </svg>
+                </button>
+
+                <button class="carousel-controls carousel-next" onclick="nextSlide()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M9 18l6-6-6-6"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    Why Choose Our <span class="highlight">Gallery</span>
+                </h2>
+                <p class="section-description">
+                    We capture the spirit of automotive passion through stunning photography and exceptional curation.
+                </p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+                            <circle cx="12" cy="13" r="4"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Premium Collection</h3>
+                    <p class="feature-description">Curated selection of the finest automotive photography</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24">
+                            <polygon points="13,2 3,14 12,14 11,22 21,10 12,10"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">High Performance</h3>
+                    <p class="feature-description">Showcasing vehicles built for power and adventure</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24">
+                            <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Quality Focused</h3>
+                    <p class="feature-description">Every image captures the essence of automotive excellence</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="12" cy="8" r="7"/>
+                            <polyline points="8.21,13.89 7,23 12,20 17,23 15.79,13.88"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Award Winning</h3>
+                    <p class="feature-description">Recognition for outstanding automotive photography</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <h3 class="footer-title">Automotive Gallery</h3>
+            <p class="footer-description">
+                Showcasing automotive excellence through stunning photography.
+            </p>
+            <div class="footer-links">
+                <span>© 2024 Automotive Gallery</span>
+                <span>•</span>
+                <span>All rights reserved</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="images.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
